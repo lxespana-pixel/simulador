@@ -4,7 +4,7 @@ import random
 
 URL_API = "https://8pkac0pg3d.execute-api.us-east-2.amazonaws.com/lecturas"
 
-TIEMPO_ESPERA_MINUTOS = 3
+TIEMPO_ESPERA_MINUTOS = 1
 
 print(f"Iniciando simulador de sensores de la jaula...")
 print(f"Los datos se enviarán cada {TIEMPO_ESPERA_MINUTOS} minutos.")
