@@ -3,16 +3,16 @@ import time
 import random
 import json
 
-# broker público para pruebas
+
 BROKER_MQTT = "broker.hivemq.com"
 PUERTO = 1883
 TEMA = "granja/ecuador/jaula1/sensores"
 
-# cliente MQTT (Soporta paho-mqtt v1 y v2)
+
 try:
     client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 except AttributeError:
-    client = mqtt.Client() # Respaldo 
+    client = mqtt.Client() 
 
 print("Conectando al Broker MQTT público...")
 client.connect(BROKER_MQTT, PUERTO, 60)
