@@ -16,8 +16,8 @@ while True:
         temp = round(random.uniform(20.0, 26.0), 1)  
         hum = round(random.uniform(50.0, 75.0), 1)   
         amon = round(random.uniform(0.5, 2.5), 2)   
-        luz = round(random.uniform(100.0, 500.0), 1)
-        co2 = round(random.uniform(400.0, 800.0), 1)
+        luz = round(random.uniform(20.0, 40.0), 1)
+        co2 = round(random.uniform(400.0, 2000.0), 1)
       
         paquete_datos = {
             "id_jaula": 1,
@@ -31,11 +31,11 @@ while True:
         }
         
         respuesta = requests.post(URL_API, json=paquete_datos)
-        
-        print(f"[ENVIADO] Temp: {temp}°C | Hum: {hum}% | Luz: {luz}lx | Amoníaco: {amon}ppm | CO2: {co2}ppm")
+      
+        print(f"[ENVIADO] Temp: {temp}°C | Hum: {hum}% | Luz: {luz}lx | Amoniaco: {amon}ppm | CO2: {co2}ppm")
         print(f"[AWS RESPONDE] {respuesta.text}\n")
         
     except Exception as e:
         print(f"[ERROR] Hubo un problema al enviar los datos: {e}")
-        
-    time.sleep(TIEMPO_ESPERA_MINUTOS * 60)
+    
+    time.sleep(TIEMPO_ESPERA_MINUTOS * 10)
