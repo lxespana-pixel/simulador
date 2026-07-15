@@ -13,11 +13,11 @@ print("Presiona las teclas Ctrl+C en esta consola para detenerlo en cualquier mo
 while True:
     try:
      
-        temp = round(random.uniform(20.0, 26.0), 1)  
-        hum = round(random.uniform(50.0, 75.0), 1)   
-        amon = round(random.uniform(0.5, 2.5), 2)   
-        luz = round(random.uniform(20.0, 40.0), 1)
-        co2 = round(random.uniform(400.0, 2000.0), 1)
+        temp = round(random.uniform(20.0, 40.0), 1)  
+        hum = round(random.uniform(50.0, 80.0), 1)   
+        amon = round(random.uniform(0.5, 30.5), 2)   
+        luz = round(random.uniform(20.0, 60.0), 1)
+        co2 = round(random.uniform(400.0, 3000.0), 1)
       
         paquete_datos = {
             "id_jaula": 1,
